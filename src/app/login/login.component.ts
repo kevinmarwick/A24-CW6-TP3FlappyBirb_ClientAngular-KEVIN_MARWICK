@@ -36,11 +36,13 @@ export class LoginComponent implements OnInit {
     };
     let x = await lastValueFrom(this.http.post<any>(this.domain+this.urlLogin, loginDTO))
     console.log(x)
-    localStorage.setItem("token", x.token)
+    sessionStorage.setItem("token", x.token)
 
     // Redirection si la connexion a réussi :
     this.route.navigate(["/play"]);
   }
+
+  
 
   async register(): Promise < void> {
   let registerDTO = {
