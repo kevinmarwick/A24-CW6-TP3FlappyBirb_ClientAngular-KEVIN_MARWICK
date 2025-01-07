@@ -16,7 +16,7 @@ export class AppComponent {
 
     // ██ Supprimer le token juste ici ! ██
    
-    //sessionStorage.removeItem("token")      
+    sessionStorage.removeItem("token")      
     
 
     let darkScreen : HTMLElement | null = document.querySelector("#darkScreen");
